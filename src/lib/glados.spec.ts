@@ -1,7 +1,8 @@
 // tslint:disable:no-expression-statement
 import test from 'ava';
 import { getGladosSaying } from './glados';
+import quotes from './quotes';
 
 test('getGladosSaying', async t => {
-  t.deepEqual(await getGladosSaying(), 'This is a triumph.');
+  t.true(quotes.includes(getGladosSaying()));
 });
