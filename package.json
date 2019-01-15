@@ -33,7 +33,7 @@
     "clean": "trash build test",
     "all": "run-s reset test cov:check doc:html",
     "prepare-release": "run-s all version doc:publish",
-    "local": "run-s clean build:main && run-s build:main && node build/main"
+    "start": "run-s clean build:main && run-s build:main && node build/main"
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
