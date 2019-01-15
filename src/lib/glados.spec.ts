@@ -4,5 +4,5 @@ import { getGladosSaying } from './glados';
 import quotes from './quotes';
 
 test('getGladosSaying', async t => {
-  t.true(quotes.includes(getGladosSaying()));
+  t.true(quotes.includes(getGladosSaying().quote));
 });
