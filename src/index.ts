@@ -15,7 +15,7 @@ const app = express();
 app.get('/health', (_, res) => res.send('Still alive.'));
 
 // GladosBot sayings
-app.get('/glados', (_, res) => res.send(getGladosSaying()));
+app.post('/glados', (_, res) => res.send(getGladosSaying()));
 
 
 let port;
