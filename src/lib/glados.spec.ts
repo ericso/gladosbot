@@ -4,5 +4,6 @@ import { getGladosSaying } from './glados';
 import quotes from './quotes';
 
 test('getGladosSaying', async t => {
-  t.true(quotes.includes(getGladosSaying()));
+  t.deepEqual(getGladosSaying().response_type, 'in_channel');
+  t.true(quotes.includes(getGladosSaying().text));
 });
