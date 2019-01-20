@@ -1,5 +1,5 @@
-import quotes from './quotes';
 import logger from '../logger';
+import { getRandomQuote } from './dataloader/quotes';
 
 type GladosResponse = {
   response_type: string,
@@ -12,7 +12,7 @@ type GladosResponse = {
  * @returns a string that is a Glados quote
  */
 export function getGladosSaying(): GladosResponse {
-  const quote = quotes[quotes.length * Math.random() << 0];
+  const quote = getRandomQuote();
   logger.info(`Glados says: ${quote}`);
   return {
     response_type: 'in_channel',
